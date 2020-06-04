@@ -651,7 +651,7 @@ void Scene::UpdateSceneFrames()
     // Add robot collision objects
     ps_->getCurrentStateNonConst().update(true);
     const std::vector<const robot_model::LinkModel*>& links =
-        ps_->getCollisionRobot()->getRobotModel()->getLinkModelsWithCollisionGeometry();
+        ps_->getCollisionEnv()->getRobotModel()->getLinkModelsWithCollisionGeometry();
 
     int last_controlled_joint_id = -1;
     std::string last_controlled_joint_name = "";
